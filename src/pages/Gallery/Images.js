@@ -7,7 +7,9 @@ const Images = ({ images }) => (
     {images.map(image => (
       <div className="uk-width-1-3" key={image._id}>
         <img data-src={`${STATIC_URL}/${image.name}`} alt="Logo" uk-img="" />
-        <p>{image.caption}</p>
+        <p>
+          {image.caption} ({image.score.substring(0, 7)})
+        </p>
       </div>
     ))}
   </div>

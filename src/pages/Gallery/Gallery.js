@@ -43,19 +43,23 @@ class Gallery extends PureComponent {
   };
 
   onFileSelect = e => {
-    const file = e.target.files[0];
+    const files = e.target.files;
     this.setState({
-      upload: { image: file }
+      upload: { images: files }
     });
   };
 
   onFileUpload = async e => {
     e.preventDefault();
-    const { image } = this.state.upload;
+    const { images } = this.state.upload;
     const data = new FormData();
-    data.append("image", image);
+    for (let i = 0; i < images.length; i += 1) {
+      data.append("images", images[i]);
+    }
     try {
       await uploadImages(data);
+      document.getElementById("file-input").value = "";
+      this.setState({ upload: {} });
       window.UIkit.notification({
         message: "Image has been uploaded",
         status: "success",
