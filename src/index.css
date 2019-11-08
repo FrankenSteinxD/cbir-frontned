@@ -16,3 +16,16 @@ code {
 .searchinput {
   width: 60%;
 }
+
+.wrapper {
+  position: relative;
+  min-height: 90vh;
+}
+
+.full-screen {
+  min-height: 90vh;
+}
+
+.p-relative {
+  position: relative;
+}

@@ -1,16 +1,15 @@
 import React from "react";
 
-const UploadForm = ({ onSubmit, onChange }) => (
+const UploadForm = ({ title, id, onSubmit, onChange }) => (
   <form onSubmit={onSubmit}>
-    <div className="uk-margin uk-flex uk-flex-center" uk-margin="">
+    <label htmlFor={id}>
+      <strong>{title}</strong>
+    </label>
+    <br />
+    <br />
+    <div>
       <div uk-form-custom="target: true">
-        <input
-          name="image"
-          type="file"
-          multiple
-          id="file-input"
-          onChange={onChange}
-        />
+        <input name="image" type="file" multiple id={id} onChange={onChange} />
         <input
           className="uk-input uk-form-width-medium"
           type="text"

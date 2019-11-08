@@ -1,0 +1,37 @@
+.uploadLink {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.header {
+  padding-top: 20%;
+  margin: auto;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.header.animate {
+  animation-name: move-up;
+}
+
+.form {
+  max-width: 760px;
+  margin: auto;
+}
+
+.input {
+  width: 100%;
+}
+
+.formIcon {
+  pointer-events: all !important;
+  cursor: pointer;
+}
+
+@keyframes move-up {
+  to {
+    padding-top: 50px;
+  }
+}
