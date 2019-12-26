@@ -29,3 +29,9 @@ code {
 .p-relative {
   position: relative;
 }
+
+.uk-lightbox-toolbar {
+  font-size: 30px !important;
+  padding: 10px 0 !important;
+  background: #000 !important;
+}

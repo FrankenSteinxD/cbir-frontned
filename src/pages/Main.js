@@ -6,6 +6,7 @@ import { notification } from "../services/uikit";
 import Header from "./Main/Header";
 import Gallery from "./Main/Gallery";
 import styles from "../css/Main.module.css";
+import UploadModal from "./Main/UploadModal";
 
 const searchFileRef = createRef();
 
@@ -68,9 +69,13 @@ const Main = () => {
 
   return (
     <div className="wrapper">
+      <UploadModal />
       <div>
         {/* eslint-disable-next-line */}
-        <a className={classnames("uk-link-muted", styles.uploadLink)}>
+        <a
+          uk-toggle="target: #upload-modal"
+          className={classnames("uk-link-muted", styles.uploadLink)}
+        >
           <span uk-icon="icon: database; ratio: 1.3" /> Upload image
         </a>
       </div>
